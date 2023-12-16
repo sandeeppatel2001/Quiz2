@@ -27,7 +27,7 @@ function App() {
   };
   const sendDataToBackend = async () => {
     try {
-      const response = await fetch("http://localhost:3001/", {
+      const response = await fetch("https://quizbackend.adaptable.app/", {
         method: "POST",
         body: JSON.stringify(dataToSend),
         headers: {

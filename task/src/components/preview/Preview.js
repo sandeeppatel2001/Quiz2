@@ -25,7 +25,7 @@ const Preview = (props) => {
   console.log("sandeeppppppppp", total, dataToSend);
   const sendDataToBackend = async () => {
     try {
-      const response = await fetch("http://localhost:3001/answer", {
+      const response = await fetch("https://quizbackend.adaptable.app/answer", {
         method: "POST",
         body: JSON.stringify(dataToSend),
         headers: {
