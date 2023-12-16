@@ -71,13 +71,6 @@ const Categorize = (props) => {
   //   ev.preventDefault();
   // }
   // console.log("ddddddd", props.data.items);
-  function draggg(ev) {
-    console.log("drag start");
-    ev.dataTransfer.setData("text", ev.target.id);
-  }
-  const handleCategoryDragStart = (e, index) => {
-    e.dataTransfer.setData("text", index.toString());
-  };
 
   const handleItemDragStart = (e, index) => {
     e.dataTransfer.setData("text", index.toString());
@@ -90,6 +83,7 @@ const Categorize = (props) => {
     if (!isNaN(draggedIndex) && draggedIndex !== targetIndex) {
       // Swap the content of cat or items arrays
       if (e.target.classList.contains("category__text")) {
+        console.log("lllllllllllllll");
         const updatedCat = [...cat];
         [updatedCat[draggedIndex], updatedCat[targetIndex]] = [
           updatedCat[targetIndex],
@@ -98,6 +92,7 @@ const Categorize = (props) => {
         setCat(updatedCat);
       } else if (e.target.classList.contains("item__text")) {
         const updatedItems = [...items];
+        console.log("ppppppppppppppppppp");
         [updatedItems[draggedIndex], updatedItems[targetIndex]] = [
           updatedItems[targetIndex],
           updatedItems[draggedIndex],
@@ -173,15 +168,16 @@ const Categorize = (props) => {
                         onDragOver={(e) => e.preventDefault()}
                         className="mt-2"
                       >
-                        <img src={drag} className="img mb-1 me-1" />
+                        <img alt="" src={drag} className="img mb-1 me-1" />
                         <input
                           type="text"
                           placeholder="Description"
-                          className="category__text"
+                          className="item__text"
                           value={item}
                           onChange={(event) => handleItem(event, index)}
                         />
                         <img
+                          alt=""
                           src={close}
                           className="img ms-1"
                           onClick={(event) => handleItemDelete(event, index)}
