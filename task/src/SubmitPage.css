@@ -1,0 +1,24 @@
+/* SubmitPage.css */
+.submit-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* background-color: #00cc00; */
+  color: #15e60d; /* White text color */
+}
+
+.success-container {
+  margin-bottom: 20px;
+}
+
+.success-icon {
+  width: 100px; /* Adjust the width as needed */
+  height: auto;
+}
+
+.success-text {
+  font-size: 3em; /* Adjust the font size as needed */
+  margin-bottom: 20px;
+}
