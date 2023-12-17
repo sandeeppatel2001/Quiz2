@@ -12,7 +12,7 @@ const corsOptions = {
   optionsSuccessStatus: 204, // Respond with 204 No Content for preflight requests
 };
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
