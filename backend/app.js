@@ -6,7 +6,7 @@ const mongoose = require("./db");
 const Answer = require("./userModel");
 require("dotenv").config();
 const corsOptions = {
-  origin: "http://localhost:3000", // Replace with the actual origin of your React app
+  origin: "https://quizbackend.adaptable.app", // Replace with the actual origin of your React app
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true, // Enable credentials (cookies, Authorization headers, etc.)
   optionsSuccessStatus: 204, // Respond with 204 No Content for preflight requests
