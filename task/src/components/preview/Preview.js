@@ -7,6 +7,7 @@ import Question3 from "./Categerize/questions/Question3";
 import Filter from "./Categerize/Filter";
 import JumpQuestion from "./Categerize/JumpQuestion";
 import { useSelector } from "react-redux";
+import Clock from "./Clock";
 const Preview = (props) => {
   const flist = useSelector((state) => state);
   const data1 = flist.counter.count.length;
@@ -45,6 +46,8 @@ const Preview = (props) => {
 
   return (
     <div className="preview__container">
+      <Clock />
+
       <div className="preview__box mt-4">
         <div className="preview__heading question w-100">Untitled Quiz</div>
         <div className="progress__bar"></div>

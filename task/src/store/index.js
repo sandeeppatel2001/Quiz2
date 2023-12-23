@@ -48,9 +48,9 @@ const dataslice3 = createSlice({
   name: "com",
   initialState: {
     question: [],
-    options: [],
+    options: [[]],
     selectedoptions: [],
-    oquestion: [],
+    oquestion: [[]],
     count1: [1],
     count2: [[1]],
   },
