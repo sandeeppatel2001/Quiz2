@@ -23,9 +23,13 @@ const Preview = (props) => {
     q2: flist.precounter2.fillsubmite,
     q3: flist.precounter3.selectedoptions,
   };
-  console.log("sandeeppppppppp", total, dataToSend);
+  if (window.location.pathname === "/") {
+    total = 6;
+    console.log("ooooooooooooooooooooooo", total);
+  }
   const sendDataToBackend = async () => {
     try {
+      console.log("ssssssssssssssssssssssssssssssssend to backend");
       const response = await fetch("https://quizbackend.adaptable.app/answer", {
         method: "POST",
         body: JSON.stringify(dataToSend),
@@ -47,9 +51,8 @@ const Preview = (props) => {
   return (
     <div className="preview__container">
       <Clock />
-
       <div className="preview__box mt-4">
-        <div className="preview__heading question w-100">Untitled Quiz</div>
+        <div className="preview__heading question w-100">Sample Quiz</div>
         <div className="progress__bar"></div>
         <div className="question__container">
           <div className="questions mt-3 scrollable-questions">
@@ -79,7 +82,6 @@ const Preview = (props) => {
           </div>
         </div>
       </div>
-
       <Link to="/submite">
         <button onClick={sendDataToBackend} className="button">
           Submit

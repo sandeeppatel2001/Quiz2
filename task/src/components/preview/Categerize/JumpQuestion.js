@@ -13,7 +13,10 @@ const JumpQuestion = (props) => {
           {/* <div className="all_Question_Jump mt-3">
             <SelectForJump /> 
           </div> */}
-          <div className="all_Question_Jump mt-3">
+          <div
+            style={{ display: "flex", flexDirection: "column" }}
+            className="all_Question_Jump  mt-3"
+          >
             {Array.from({ length: props.total }, (_, index) => (
               <SelectForJump no={index} key={index} />
             ))}

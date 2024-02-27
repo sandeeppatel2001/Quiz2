@@ -8,7 +8,7 @@ const Question3 = (props) => {
           Comprehensive Question {props.no + 1}
         </p>
         <div>
-          <div className="question3__option p-3 ms-3 me-3">
+          <div className="question3__option p-3  me-3">
             <h5>Passege Heading</h5>
             <div className="passege__content">
               <p>{props.question}</p>

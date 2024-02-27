@@ -3,7 +3,7 @@ import "./Clock.css"; // Import the CSS file for styling
 
 const Clock = () => {
   const [time, setTime] = useState(0);
-  const [isRunning, setIsRunning] = useState(false);
+  const [isRunning, setIsRunning] = useState(1);
 
   useEffect(() => {
     let interval;
@@ -31,23 +31,23 @@ const Clock = () => {
     }${seconds}s`;
   };
 
-  const handleStart = () => {
-    setIsRunning(true);
-  };
+  // const handleStart = () => {
+  //   setIsRunning(true);
+  // };
 
-  const handleStop = () => {
-    setIsRunning(false);
-  };
+  // const handleStop = () => {
+  //   setIsRunning(false);
+  // };
 
   return (
     <div className="clock-container">
       <div className="clock">
-        <div className="time">Time: {formatTime(time)}</div>
+        <div className="time"> {formatTime(time)}</div>
         <div className="buttons">
-          <button onClick={handleStart}>Start</button>
+          {/* <button onClick={handleStart}>Start</button>
           <button style={{ backgroundColor: "red" }} onClick={handleStop}>
             Stop
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

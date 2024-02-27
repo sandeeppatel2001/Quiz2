@@ -15,6 +15,64 @@ function App() {
   const data2 = flist.counter2.count;
   const data3 = flist.counter3.count1;
   console.log("sandeep", flist.counter3.oquestion);
+  const dataToSendinstring = {
+    q1: [
+      {
+        key: 0,
+        items: ["Apple", "Grass", "Cherry", "eucalyptus", "Blueberries"],
+        cat: ["1.Red", "2.Blue", "3.Green"],
+        updatedBelong: ["1", "1", "3", "3", "2"],
+      },
+    ],
+    q2: [
+      {
+        key: 0,
+        forpreview: "I am an ---- . I'm going to ---- you.",
+        selectedword: ["Hire", "HR"],
+      },
+      {
+        key: 0,
+        forpreview: "I am an ---- . I'm NOT going to ---- you.",
+        selectedword: ["Fire", "HR"],
+      },
+    ],
+    q3: {
+      question: [
+        "this is commmprehend=sicve question",
+        "this is second mcq question",
+      ],
+      options: [
+        [
+          {
+            1: "mixed effects in the brain",
+            2: "inhibitory effects on enzymes in the brain",
+            3: "close structural relationships with caffeine",
+            4: "depressive effects on mouse locomotion",
+          },
+          { 1: "IBMX", 2: "caffeine", 3: "adenosine", 4: "theophylline" },
+        ],
+        [
+          {
+            1: " A market for such artifacts already exists.",
+            2: "Such artifacts seldom have scientific value.",
+            3: "There is likely to be a continuing supply of such artifacts.",
+            4: " Museums are well supplied with examples of such artifacts.",
+          },
+        ],
+      ],
+      selectedoptions: [],
+      oquestion: [
+        [
+          "In response to experimental results concerning IBMX, Snyder etal contended that it is not uncommon for psychoactive drugs to have",
+          "According to Snyder et al, all of the following compounds can bind to specific receptors in the brain EXCEPT",
+        ],
+        [
+          "The author implies that all of the following statements about duplicate artifacts are true EXCEPT:",
+        ],
+      ],
+    },
+  };
+
   let dataToSend = {
     q1: flist.counter.formlist,
     q2: flist.counter2.formlist,
@@ -44,15 +102,26 @@ function App() {
       console.error("Error sending data:", error);
     }
   };
+  const create = () => {
+    window.location = "/create";
+  };
   console.log("from App.js question", flist.counter3.question);
   console.log("from App.js options", flist.counter3.options);
   console.log("from App.js se;ectedoptions", flist.counter3.selectedoptions);
-
+  console.log("dataToSend = ", dataToSend);
+  console.log("dataToSendinstring = ", JSON.stringify(dataToSend));
   return (
     <div className="App mb-3">
+      <div
+        onClick={create}
+        style={{ marginTop: "3px", cursor: "pointer" }}
+        className="button"
+      >
+        Create Your Quize
+      </div>
       <Routes>
         <Route
-          path="/"
+          path="/create"
           exact
           element={
             <Fragment>
@@ -72,7 +141,7 @@ function App() {
             </Fragment>
           }
         ></Route>
-
+        <Route path="/" element={<Preview data={dataToSendinstring} />} />
         <Route path="/preview" element={<Preview data={dataToSend} />} />
         <Route path="/submite" element={<SubmitPage />} />
       </Routes>
