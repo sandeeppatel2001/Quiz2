@@ -38,8 +38,8 @@ function App() {
     ],
     q3: {
       question: [
-        "this is commmprehend=sicve question",
-        "this is second mcq question",
+        "Like many other agents that affect neuron firing, adenosine must first bind to specific receptors on neuronal membranes. There are at least two classes of these receptors, which have been designated A1 and A2.Snyder et al propose that caffeine, which is structurally similar to adenosine, is able to bind to both types of receptors, which prevents adenosine from attaching there and allows the neurons to fire more readily than they otherwise would",
+        "I would like to make an outrageous suggestion that would at one stroke provide funds for archaeology and reduce the amount of illegal digging. I would propose that scientific archeological expeditions and governmental authorities sell excavated artifacts on the open market. Such sales would provide substantial funds for the excavation and preservation of archaeological sites and the publication of results. At the same time, they would break the illegal excavator’s grip on the market, thereby decreasing the inducement to engage in illegal activities.",
       ],
       options: [
         [
