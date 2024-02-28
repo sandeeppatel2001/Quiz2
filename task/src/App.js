@@ -112,17 +112,32 @@ function App() {
   console.log("dataToSendinstring = ", JSON.stringify(dataToSend));
   return (
     <div className="App mb-3">
-      <div
+      <div>
+        <Link to="/">
+          <button style={{ marginTop: "3px" }} className="button">
+            Home
+          </button>
+        </Link>
+        <Link to="/create">
+          <button
+            style={{ marginTop: "3px", marginLeft: "3px" }}
+            className="button"
+          >
+            Create Your Quize
+          </button>
+        </Link>
+      </div>
+
+      {/* <div
         onClick={create}
         style={{ marginTop: "3px", cursor: "pointer" }}
         className="button"
       >
         Create Your Quize
-      </div>
+      </div> */}
       <Routes>
         <Route
           path="/create"
-          exact
           element={
             <Fragment>
               {data1.map((v, i) => {
