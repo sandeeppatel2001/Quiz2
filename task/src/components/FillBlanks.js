@@ -87,14 +87,16 @@ const FillBlanks = (props) => {
             />
           </div>
           <div className="ms-4 mt-3 heading">
-            <div className="mt-3">Sentence</div>
+            <div className="mt-3">
+              Sentence (select the words for making blank space)
+            </div>
             <input
               ref={inputRef}
               id="sandeep"
               onMouseUp={() => changeSelectedText("NewText")}
               onChange={gettext}
               type="text"
-              placeholder="Underline the word here to convert them into blanks"
+              placeholder="select the words for making blanks space "
               className="w-50 category__text"
             />
           </div>
@@ -112,13 +114,13 @@ const FillBlanks = (props) => {
                 return <Fillinput value={v}></Fillinput>;
               })}
             </div>
-            <div className="ms-4">
+            {/* <div className="ms-4">
               <select className="select">
                 <option value="option1">
                   {"Option " + (wholetext.length + 1)}
                 </option>
               </select>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* <button onClick={addnewform}>+</button> */}

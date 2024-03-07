@@ -27,12 +27,12 @@ function App() {
     q2: [
       {
         key: 0,
-        forpreview: "I am an ---- . I'm going to ---- you.",
+        forpreview: "I am a ---- . I'm going to ---- you.",
         selectedword: ["Hire", "HR"],
       },
       {
         key: 0,
-        forpreview: "I am an ---- . I'm NOT going to ---- you.",
+        forpreview: "I am a ---- . I'm NOT going to ---- you.",
         selectedword: ["Fire", "HR"],
       },
     ],
@@ -102,14 +102,14 @@ function App() {
       console.error("Error sending data:", error);
     }
   };
-  const create = () => {
-    window.location = "/create";
-  };
-  console.log("from App.js question", flist.counter3.question);
-  console.log("from App.js options", flist.counter3.options);
-  console.log("from App.js se;ectedoptions", flist.counter3.selectedoptions);
-  console.log("dataToSend = ", dataToSend);
-  console.log("dataToSendinstring = ", JSON.stringify(dataToSend));
+  // const create = () => {
+  //   window.location = "/create";
+  // };
+  // console.log("from App.js question", flist.counter3.question);
+  // console.log("from App.js options", flist.counter3.options);
+  // console.log("from App.js se;ectedoptions", flist.counter3.selectedoptions);
+  // console.log("dataToSend = ", dataToSend);
+  // console.log("dataToSendinstring = ", JSON.stringify(dataToSend));
   return (
     <div className="App mb-3">
       <div>

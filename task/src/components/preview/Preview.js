@@ -25,11 +25,11 @@ const Preview = (props) => {
   };
   if (window.location.pathname === "/") {
     total = 6;
-    console.log("ooooooooooooooooooooooo", total);
+    // console.log("ooooooooooooooooooooooo", total);
   }
   const sendDataToBackend = async () => {
     try {
-      console.log("ssssssssssssssssssssssssssssssssend to backend");
+      // console.log("ssssssssssssssssssssssssssssssssend to backend");
       const response = await fetch("https://quizbackend.adaptable.app/answer", {
         method: "POST",
         body: JSON.stringify(dataToSend),
